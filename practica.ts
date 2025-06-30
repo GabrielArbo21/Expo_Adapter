@@ -37,13 +37,9 @@ class AdaptadorMacheteACuchillo implements Cuchillo {
         this.machete = machete;
     }
     getLargoHojaCm(): number {
-        // La magia del adaptador: Traducimos el "largo total" del machete
-        // a un "largo de hoja" que la interfaz Cuchillo espera.
-        // Aquí simulamos que solo un porcentaje del machete es útil para cortar finamente.
         return this.machete.getLargoTotalCm() * 0.6; // Por ejemplo, el 60% del largo total
     }
     cortar(): void {
-        // Llamamos al método del machete subyacente, pero a través del método de la interfaz Cuchillo.
         this.machete.tajar(); // El machete "corta" realizando su acción de "tajar"
     }
 }
