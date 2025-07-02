@@ -37,7 +37,6 @@ class AdaptadorMacheteACuchillo implements Cuchillo {
         this.machete = machete;
     }
     getLargoHojaCm(): number {
-        return this.machete.getLargoTotalCm() * 0.6; // Por ejemplo, el 60% del largo total
     }
     cortar(): void {
         this.machete.tajar(); // El machete "corta" realizando su acción de "tajar"
